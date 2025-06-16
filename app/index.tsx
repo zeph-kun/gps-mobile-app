@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, Text, StyleSheet, SafeAreaView } from 'react-native';
 import { useAuth } from '../context/AuthContext';
-import LogoutButton from '../components/LogoutButton';
+import LoginButton from '@/components/LoginButton';
 
 export default function Home() {
   const { user } = useAuth();
@@ -10,12 +10,12 @@ export default function Home() {
     <SafeAreaView style={styles.container}>
       <View style={styles.content}>
         <Text style={styles.welcome}>
-          Bienvenue, {user?.email}!
+          Bienvenue !
         </Text>
       </View>
-      
+
       <View style={styles.footer}>
-        <LogoutButton/>
+        <LoginButton redirectToLogin={true} title="Sign In"/>
       </View>
     </SafeAreaView>
   );
