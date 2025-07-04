@@ -5,6 +5,7 @@ import { checkSession, logout as logoutService } from '../services/auth';
 interface User {
   id: string;
   email: string;
+  firstName?: string;
   name?: string;
 }
 

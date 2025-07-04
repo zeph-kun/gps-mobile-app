@@ -19,7 +19,7 @@ export default function SignIn() {
       if (result.success && result.user) {
         await signIn(result.user);
         // Utilisez le chemin vers la page d'accueil directement
-        router.replace('/(app)'); // Chemin vers la page d'accueil de l'application
+        router.replace('/(tabs)'); // Chemin vers la page d'accueil de l'application
         // OU si vous avez une page spécifique dans (app)
       } else {
         Alert.alert('Erreur', result.message || 'Échec de la connexion');
